@@ -138,4 +138,29 @@ This shows us that whenever we ***XOR*** a number ***x*** with itself, it always
 
 ![](https://latex.codecogs.com/gif.latex?%5Ctherefore0%5Coplus2%3D2)
 
-This shows us that whenever we ***XOR*** zero with a number ***x***, it always results back the number ***x***. lets now use this knowledge to simplify the above expression.
+This shows us that whenever we ***XOR*** zero with a number ***x***, it always results back the number ***x***. lets now use this knowledge to simplify the above expression. Looking at the first bracket, we have the following:
+
+![](https://latex.codecogs.com/gif.latex?2%5Coplus%202%5Coplus%202%5Coplus%202)
+
+lets put brackets around groups of two terms and solve them each:
+
+![](https://latex.codecogs.com/gif.latex?%282%5Coplus%202%29%5Coplus%20%282%5Coplus%202%29)
+
+As discussed, the resulting values in both of these brackets will be zero:
+
+![](https://latex.codecogs.com/gif.latex?%280%29%5Coplus%20%280%29)  
+![](https://latex.codecogs.com/gif.latex?0)
+
+From this, we can tell that if the following conditions are met:
+1. We have an expression in which any value ***x*** is being ***XOR***'ed with itself any number of times
+2. We can divide the expression into subexpressions of two terms with no terms left (i.e. number of ***x***'s is even)  
+the resulting value will be zero.
+
+As we have established that the first subexpression of the original expression is 0, we can simplify the next part.
+
+![](https://latex.codecogs.com/gif.latex?3%5Coplus%203%5Coplus%203%5Coplus%203%5Coplus%203%5Coplus%203)
+
+We can straight away see that the number of ***3***'s in the above expression is 6 (even), which means that it would simply to zero. The expression simplifies to zero in the third and fourth part of the expressions, since the number of ***4***'s and ***5***'s is, respectively, even in the subexpressions.
+
+![](https://latex.codecogs.com/gif.latex?0%5Coplus%200%5Coplus%200%5Coplus%200)  
+![](https://latex.codecogs.com/gif.latex?0)
