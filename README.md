@@ -1,4 +1,4 @@
-The following is an interesting problem from HackerRank. I thought I might share my solution as well as the explanation to this problem, since I found it rather fascinating (The explanation is at the bottom).
+The following is an interesting problem from HackerRank. I thought I might share my solution to this problem as well as the explanation, I found it rather fascinating. Click [here](#solution-explained) to skip to the solution explanation.
 
 # Sansa and XOR
 
@@ -102,11 +102,11 @@ Test Case 1:
 
 ## Solution Explained
 
-At first, this problem seems rather daunting. However, after a deeper observation and some trial & error, it comes out to be the total opposite.
+At first, this problem seems a little daunting. However, after a deeper observation, and a little bit of trial & error, it comes out to be the total opposite.
 
 Lets analyse a sample input. Lets take ***arr = [2, 3, 4, 5]***.
 
-From the question, we can see that this can be put into context as follows:
+From the question, we can see that this can be represented as follows:
 
 ![](https://latex.codecogs.com/gif.latex?2%5Coplus%203%5Coplus%204%5Coplus%205%5Coplus%20%282%5Coplus%203%29%5Coplus%20%283%5Coplus%204%29%5Coplus%20%284%5Coplus%205%29%5Coplus%20%282%5Coplus%203%5Coplus%204%29%5Coplus%20%283%5Coplus%204%5Coplus%205%29%5Coplus%20%282%5Coplus%203%5Coplus%204%5Coplus%205%29)
 
@@ -118,7 +118,7 @@ Lets manipulate the above expression, so that all the like terms are grouped. Fo
 
 ![](https://latex.codecogs.com/gif.latex?%282%5Coplus%202%5Coplus%202%5Coplus%202%29%5Coplus%20%283%5Coplus%203%5Coplus%203%5Coplus%203%5Coplus%203%5Coplus%203%29%5Coplus%20%284%5Coplus%204%5Coplus%204%5Coplus%204%5Coplus%204%5Coplus%204%29%5Coplus%20%285%5Coplus%205%5Coplus%205%5Coplus%205%29)
 
-Lets now attempt to solve this expression bracket by bracket. Before that, however, lets we have a quick look at what happens when you ***XOR*** a value, with itself. Lets ***XOR*** the binary representation of ***2*** with itself:
+Lets now attempt to solve this expression bracket by bracket. Before that, however, lets have a quick look at what happens when you ***XOR*** a value, with itself. Lets ***XOR*** the binary representation of ***2*** with itself:
 
 ![](https://latex.codecogs.com/gif.latex?2_%7B10%7D%3D10_2)
 
@@ -138,7 +138,7 @@ This shows us that whenever we ***XOR*** a number ***x*** with itself, it always
 
 ![](https://latex.codecogs.com/gif.latex?%5Ctherefore0%5Coplus2%3D2)
 
-This shows us that whenever we ***XOR*** zero with a number ***x***, it always results back the number ***x***. lets now use this knowledge to simplify the above expression. Looking at the first bracket, we have the following:
+This shows us that whenever we ***XOR*** zero with a number ***x***, it always results back the number ***x***. lets now go back and use this knowledge to simplify the expression. Looking at the first bracket, we have the following:
 
 ![](https://latex.codecogs.com/gif.latex?2%5Coplus%202%5Coplus%202%5Coplus%202)
 
@@ -156,16 +156,16 @@ From this, we can tell that if the following conditions are met:
 2. We can divide the expression into subexpressions of two terms with no remaining terms (i.e. number of ***x***'s is even)  
 the resulting value will be zero.
 
-As we have established that the first subexpression of the original expression is 0, we can simplify the next part.
+We have established that the first subexpression of the original expression simplifies to 0. We can now simplify the next part.
 
 ![](https://latex.codecogs.com/gif.latex?3%5Coplus%203%5Coplus%203%5Coplus%203%5Coplus%203%5Coplus%203)
 
-We can straight away see that the number of ***3***'s in the above expression is 6 (even), which means that it would simplify to zero. The expression simplifies to zero in the third and fourth part of the expressions as well, since the number of ***4***'s and ***5***'s are even, respectively, in the subexpressions.
+We can straight away see that the number of ***3***'s in the above subexpression is 6 (even), which means that it would simplify to zero. The Third and fourth subexpressions also simplify to zero, since the number of ***4***'s and ***5***'s in each subexpression, respectively, is even.
 
 ![](https://latex.codecogs.com/gif.latex?0%5Coplus%200%5Coplus%200%5Coplus%200)  
 ![](https://latex.codecogs.com/gif.latex?0)
 
-With further inspection, it is observed that, in fact, for all input arrays that have an even length, the output is zero, since all the value in an input array of even length, occur exactly an even amount of the times in the expression. From this, we can speculate that the problem must simply lie in the amount of times a number, ***x***, occurs within the expression. If it occurs an even amount of times, then the value of the subexpression with only ***x***'s, will equate to zero, otherwise it will equate to ***x***.
+With further inspection, it is observed that, in fact, for all input arrays that have an even length, the output is zero since all the values in an input array of even length occur exactly an even amount of times in the expression. From this, we can speculate that the problem must lie in the amount of times a number, ***x***, occurs within the expression. If we can somehow find a pattern that reveals to us whether each element of the array occurs an even or odd number of times, we could use this to solve the problem.
 
 Taking all of the above into account, what if the length of the input array is odd? Lets take ***arr = [2, 3, 4]*** to evaluate this scenario.
 
@@ -181,20 +181,31 @@ As before, lets take the first bracket of the above expression and divide it int
 
 ![](https://latex.codecogs.com/gif.latex?%282%5Coplus%202%29%5Coplus%202)
 
-We can notice that the amount of ***2***'s in the above subexpression are 3 (odd). Therefore, we can simplify the grouped terms to zero , we also know that when we ***XOR*** any value with zero, we get the same value back. This would result as below:
+We can notice that the number of ***2***'s in the above subexpression is 3 (odd). We can simplify the grouped terms to zero, furthermore, we know that when we ***XOR*** any value with zero, we get the same value back. This implies the following:
 
 ![](https://latex.codecogs.com/gif.latex?0%5Coplus%202)  
 ![](https://latex.codecogs.com/gif.latex?2)
 
-Looking at the second part of the expression, we can see that there are an even number of ***3***'s in the subexpression, this part of the expression would simplify to zero. Finally, the third part of the equation has an odd number of ***4***'s, which would simplify to ***4***. The following expression is obtained:
+Looking at the second part of the expression, we can see that there are an even number of ***3***'s in the subexpression. Therefore, as before, this part of the expression would simplify to zero. Finally, the third part of the equation has an odd number of ***4***'s, which we now know would simplify to ***4***. The following expression is obtained:
+
+![](https://latex.codecogs.com/gif.latex?2%5Coplus%200%5Coplus%204)
+
+The above expression is the key to the solution. Lets take a minute to compare this expression with our input array:
+
+![](https://latex.codecogs.com/gif.latex?%5B2%2C%203%2C%204%5D)  
+![](https://latex.codecogs.com/gif.latex?2%5Coplus%200%5Coplus%204)
+
+We can observe that the first element of the array, ***arr[0]*** (even index), is equal to the first term of the expression. Similarly, the third element of the array, ***arr[2]*** (even index), is also equal to the third term of the expression. However, the second term of the expression is zero, which is not equal to the second element of the array, ***arr[1]*** (odd index). Now that we have noticed something, lets quickly simplify the expression to get the answer:
 
 ![](https://latex.codecogs.com/gif.latex?2%5Coplus%200%5Coplus%204)  
 ![](https://latex.codecogs.com/gif.latex?2%5Coplus%204)  
 ![](https://latex.codecogs.com/gif.latex?6)
 
-Again, with some further inspection, a pattern is noticed. if we have any ***arr = [a, b, c, d, e, f, g, ...]*** where a, b, c, d, e, f, g, ... are all integers and the length of ***arr*** is odd, the following is the output:
+After observing other inputs for confirmation, we can verify a pattern. For any ***arr = [a, b, c, d, e, f, g, ...]*** where the length of ***arr*** is odd, the following would be the output:
 
 ![](https://latex.codecogs.com/gif.latex?a%5Coplus%200%5Coplus%20c%5Coplus%200%5Coplus%20e%5Coplus%200%5Coplus%20g)  
 ![](https://latex.codecogs.com/gif.latex?a%5Coplus%20c%5Coplus%20e%5Coplus%20g)
+
+All the elements at even indeces of the input array, occur exactly an odd number of times in the expression, therefore being carried into the answer. All the elements at odd indeces of the input array, occur exactly an even number of times in the expression, therefore being reduced to zero.
 
 With this information, coding the solution becomes much easier.
