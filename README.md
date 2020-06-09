@@ -194,7 +194,7 @@ Looking at the second part of the expression, we can see that there are an even 
 
 Again, with some further inspection, a pattern is noticed. if we have any ***arr = [a, b, c, d, e, f, g, ...]*** where a, b, c, d, e, f, g, ... are all integers and the length of ***arr*** is odd, the following is the output:
 
-![](https://latex.codecogs.com/gif.latex?a%5Coplus%200%5Coplus%20c%5Coplus%200%5Coplus%20e%5Coplus%200%5Coplus%20g)
+![](https://latex.codecogs.com/gif.latex?a%5Coplus%200%5Coplus%20c%5Coplus%200%5Coplus%20e%5Coplus%200%5Coplus%20g)  
 ![](https://latex.codecogs.com/gif.latex?a%5Coplus%20c%5Coplus%20e%5Coplus%20g)
 
 With this information, coding the solution becomes much easier.
