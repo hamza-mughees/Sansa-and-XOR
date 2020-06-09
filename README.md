@@ -198,7 +198,7 @@ The above expression is the key to the solution. Lets take a minute to compare t
 We can observe that the first element of the array, ***arr[0]*** (even index), is equal to the first term of the expression. Similarly, the third element of the array, ***arr[2]*** (even index), is also equal to the third term of the expression. However, the second term of the expression is zero, which is not equal to the second element of the array, ***arr[1]*** (odd index). Now that we have noticed something, lets quickly simplify the expression to get the answer:
 
 **2 ⊕ 0 ⊕ 4**  
-**= 2 ⊕ 4**
+**= 2 ⊕ 4**  
 **= 6**
 
 After observing other inputs for confirmation, we can verify a pattern. For any ***arr = [a, b, c, d, e, f, g, ...]*** where the length of ***arr*** is odd, the following would be the output:
