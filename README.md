@@ -104,7 +104,7 @@ Test Case 1:
 
 ## Solution Explained
 
-At first, this problem seems a little daunting. However, after a deeper observation, and a little bit of trial & error, it comes out to be the total opposite.
+At first, this problem seems a little daunting. However, after a deeper analysation, and a little bit of trial & error, it comes out to be the total opposite.
 
 Lets analyse a sample input. Lets take ***arr = [2, 3, 4, 5]***.
 
@@ -179,7 +179,7 @@ Following the exact same steps as with the previous scenario, we end up with the
 
 **(2 ⊕ 2 ⊕ 2) ⊕ (3 ⊕ 3 ⊕ 3 ⊕ 3) ⊕ (4 ⊕ 4 ⊕ 4)**
 
-As before, lets take the first bracket of the above expression and divide it into subexpressions of two terms:
+As before, lets take the first bracketed subexpression of the above expression and divide it into groups of two terms:
 
 **(2 ⊕ 2) ⊕ 2**
 
