@@ -2,6 +2,8 @@ The following is an interesting problem from HackerRank. I thought I might share
 
 # Sansa and XOR
 
+[![Run on Repl.it](https://repl.it/badge/github/hamza-mughees/Sansa-and-XOR)](https://repl.it/github/hamza-mughees/Sansa-and-XOR)
+
 Sansa has an array. She wants to find the value obtained by XOR-ing the contiguous subarrays, followed by XOR-ing the values thus obtained. Determine this value.
 
 For example, if ***arr = [3, 4, 5]***:
