@@ -146,7 +146,7 @@ lets put brackets around groups of two terms and solve them each:
 
 As discussed, the resulting values in both of these brackets will be zero:
 
-**(0) ⊕ (0)**
+**(0) ⊕ (0)**  
 **= 0**
 
 From this, we can tell that if the following conditions are met:
@@ -162,7 +162,7 @@ We have established that the first subexpression of the original expression simp
 
 We can straight away see that the number of ***3***'s in the above subexpression is 6 (even), which means that it would simplify to zero. The third and fourth subexpressions also simplify to zero, since the number of ***4***'s and ***5***'s in each subexpression, respectively, is even.
 
-**0 ⊕ 0 ⊕ 0 ⊕ 0**
+**0 ⊕ 0 ⊕ 0 ⊕ 0**  
 **= 0**
 
 With further inspection, it is observed that, in fact, for all input arrays that have an even length, the output is zero since all the values in an input array of even length occur exactly an even amount of times in the expression. From this, we can speculate that the problem must lie in the amount of times a number, ***x***, occurs within the expression. If we can somehow find a pattern that reveals to us whether each element of the array occurs an even or odd number of times, we could use this to solve the problem.
@@ -203,7 +203,7 @@ We can observe that the first element of the array, ***arr[0]*** (even index), i
 
 After observing other inputs for confirmation, we can verify a pattern. For any ***arr = [a, b, c, d, e, f, g, ...]*** where the length of ***arr*** is odd, the following would be the output:
 
-**a ⊕ 0 ⊕ c ⊕ 0 ⊕ e ⊕ 0 ⊕ g**
+**a ⊕ 0 ⊕ c ⊕ 0 ⊕ e ⊕ 0 ⊕ g**  
 **= a ⊕ c ⊕ e ⊕ g**
 
 All the elements at even indeces of the input array, occur exactly an odd number of times in the expression, therefore being carried into the answer. All the elements at odd indeces of the input array, occur exactly an even number of times in the expression, therefore being reduced to zero.
