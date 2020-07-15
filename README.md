@@ -1,4 +1,8 @@
-The following is an interesting problem from HackerRank. I thought I might share my solution to this problem, as well as the explanation, I found it rather fascinating. Click [here](#solution-explained) to skip to the solution explanation.
+The following is an interesting problem from HackerRank. I thought I might share my solution to this problem, as well as the explanation, I found it rather fascinating. 
+
+Click [here](https://www.hackerrank.com/challenges/sansa-and-xor/problem) to view the problem on the HackerRank website.
+
+Click [here](#solution-explained) to skip to the solution explanation.
 
 # Sansa and XOR
 
